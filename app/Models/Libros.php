@@ -47,4 +47,8 @@ class Libros extends Model
         return Libros::find($id);
     }
 
+    public static function findTitulo($titulo){
+        return Libros::where('titulo' , '=' , $titulo)->get();
+    }
+
 }

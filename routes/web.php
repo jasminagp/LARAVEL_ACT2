@@ -45,3 +45,6 @@ Route::get('/deletePrestamo/{id}' , [PrestamosController::class, 'deletePrestamo
 Route::get('/updatePrestamoForm/{id}' , [PrestamosController::class, 'updatePrestamoForm'])->name('updatePrestamoForm');
 Route::post('/updatePrestamo' , [PrestamosController::class, 'updatePrestamo'])->name('updatePrestamo');
 
+//Buscador de libros
+Route::post('/showAllLibrosTitulo', [LibrosController::class, 'showAllLibrosTitulo'])->name('showAllLibrosTitulo');
+

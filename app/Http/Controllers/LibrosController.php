@@ -44,4 +44,9 @@ class LibrosController extends Controller
 
         return Redirect::to('/showLibros');
     }
+
+    public function showAllLibrosTitulo(Request $request){
+        $allLibroTitulo = Libros::findTitulo($request->input('titulo'));
+        return view('biblioteca.mostrarLibros')->with('libros', $allLibroTitulo);
+    }
 }
